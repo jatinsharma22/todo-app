@@ -8,6 +8,7 @@ const ItemList = ({
   isEditItem,
   removeItem,
 }) => {
+  console.log(listItem);
   return (
     <>
       {listItem.map((element) => {
@@ -40,11 +41,23 @@ const ItemList = ({
           </div>
         );
       })}
-      <div className="mt-5 text-center">
-        <Button type="button" className="btn_remove" onClick={removeItem}>
-          Remove All
-        </Button>
-      </div>
+      {/* {listItem.length > 0 && (
+        <div className="mt-5 text-center">
+          <Button type="button" className="btn_remove" onClick={removeItem}>
+            Remove All
+          </Button>
+        </div>
+      )} */}
+
+      {listItem.length > 0 ? (
+        <div className="mt-5 text-center">
+          <Button type="button" className="btn_remove" onClick={removeItem}>
+            Remove All
+          </Button>
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 };

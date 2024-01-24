@@ -56,3 +56,7 @@ form {
 .active_edit_item .list_item {
   background: #8e6bff;
 }
+.github img {
+  max-width: 40px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(224deg) brightness(102%) contrast(102%);
+}

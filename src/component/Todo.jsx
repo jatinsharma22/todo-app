@@ -103,11 +103,15 @@ const Todo = () => {
   // Remove All Item
   const handleRemoveAll = () => {
     SetItems([]);
+    SetInputData("");
   };
 
   return (
     <>
-      <div className="main_wrap">
+      <div className="main_wrap position-relative">
+       <div className="position-absolute end-0 top-0 github p-5">
+          <a href="https://github.com/jatinsharma22/todo-app" target="_blank"><img src="./images/github.svg" /></a>
+        </div>
         <Container>
           <Form>
             <TodoHeader />
@@ -125,8 +129,6 @@ const Todo = () => {
               isEditItem={isEditItem}
               removeItem={handleRemoveAll}
             />
-
-            
           </Form>
         </Container>
       </div>
