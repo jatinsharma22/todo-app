@@ -104,6 +104,7 @@ const Todo = () => {
   const handleRemoveAll = () => {
     SetItems([]);
     SetInputData("");
+    SetToggleEdit(true)
   };
 
   return (
